@@ -8,9 +8,9 @@ public class HttpExample {
 
     public static void main(String[] args) throws IOException {
         String url = "http://www.google.com";
-        URL obj = new URL(url);
+        URL url_obj = new URL(url);
 
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        HttpURLConnection con = (HttpURLConnection) url_obj.openConnection();
         con.setRequestMethod("GET");
         con.setRequestProperty("User-Agent", "Mozilla/5.0");
 

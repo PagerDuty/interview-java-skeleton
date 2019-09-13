@@ -17,12 +17,12 @@ public class JsonExample {
         "{\"name\": \"Alice\", \"friends\": [\"Bob\", \"Charlie\", \"Donna\"]}";
 
     public static void main(String[] args) {
-        JSONObject obj = new JSONObject(JSON);
+        JSONObject json_object = new JSONObject(JSON);
 
-        String name = obj.getString("name");
+        String name = json_object.getString("name");
         System.out.print(name + " has these friends: ");
 
-        JSONArray arr = obj.getJSONArray("friends");
+        JSONArray arr = json_object.getJSONArray("friends");
         for (int i = 0; i < arr.length(); i++) {
             System.out.print(arr.getString(i) + " ");
         }
