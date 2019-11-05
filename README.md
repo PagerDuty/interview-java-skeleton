@@ -1,6 +1,3 @@
-This repository contains Java code snippets for the "API Client Design and Coding" interview slot.
+This repository contains a bootstrapped Java project for the "API Client Design and Coding" interview slot that contains a handful of utility functions.
 
-Why? Most applicants struggle with HTTP calls and JSON parsing in Java since they usually rely on a framework.
-Each of these snippets can be sent to the applicant in an email once we notice they are struggling.
-
-They are left as example code on purpose to prompt the candidate to make changes and show us their understanding of how HTTP clients work.
+You can simply go to "Clone or download" in GitHub and then click "Download ZIP" so you can send it to the candidate via email.
