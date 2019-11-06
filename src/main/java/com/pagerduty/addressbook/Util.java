@@ -1,13 +1,17 @@
+package com.pagerduty.addressbook;
+
+import com.google.gson.Gson;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Map;
 
-public class HttpExample {
+public class Util {
 
-    public static void main(String[] args) throws IOException {
-        String url = "http://www.google.com";
+    public static String httpRequest(String url) throws IOException {
         URL url_obj = new URL(url);
 
         HttpURLConnection con = (HttpURLConnection) url_obj.openConnection();
@@ -26,6 +30,16 @@ public class HttpExample {
         }
         in.close();
 
-        System.out.println(response.toString());
+        return response.toString();
+    }
+
+    public static Map parseJsonToMap(String jsonStr) {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonStr, Map.class);
+    }
+
+    public static <T> T parseJsonToObject(String jsonStr, Class<T> clazz) {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonStr, clazz);
     }
 }
