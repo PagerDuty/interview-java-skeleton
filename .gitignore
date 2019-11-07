@@ -1,3 +1,11 @@
 .idea
 out/
 .class
+*.zip
+*.tar.gz
+*.dmg
+target/
+.settings
+.classpath
+.project
+.idea

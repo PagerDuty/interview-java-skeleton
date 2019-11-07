@@ -8,10 +8,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Util {
 
-    public static String httpRequest(String url) throws IOException {
+    public static String httpGetRequest(String url) throws IOException {
         URL url_obj = new URL(url);
 
         HttpURLConnection con = (HttpURLConnection) url_obj.openConnection();
@@ -41,5 +42,10 @@ public class Util {
     public static <T> T parseJsonToObject(String jsonStr, Class<T> clazz) {
         Gson gson = new Gson();
         return gson.fromJson(jsonStr, clazz);
+    }
+
+    public static String readKeyboardInputFromUser() {
+        Scanner scan = new Scanner(System.in);
+        return scan.nextLine();
     }
 }
